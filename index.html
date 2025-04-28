@@ -314,24 +314,24 @@
             </div>
 
             <!-- Formulir Kontak -->
-            <form action="https://formspree.io/f/xdkgkqaa" method="POST">
+            <form action="simpan.php" method="POST">
                 <div class="input-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <label for="fullname">Nama *</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Nama Lengkap">
                 </div>
                 <div class="input-group">
                     <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                    <input type="email" id="email" name="email" required placeholder="Email">
                 </div>
                 <div class="input-group">
                     <label for="phone">No Telepon *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+62" pattern="[0-9+ -]*">
-                </div>            
-                <div class="input-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
+                    <input type="text" id="phone" name="phone" required placeholder="No Telepon">
                 </div>
-                <button type="submit">Submit</button>
+                <div class="input-group">
+                    <label for="message">Pesan *</label>
+                    <textarea id="message" name="message" required placeholder="Pesan"></textarea>
+                </div>
+                <button type="submit">Kirim</button>
             </form>
         </div>
     </section>
