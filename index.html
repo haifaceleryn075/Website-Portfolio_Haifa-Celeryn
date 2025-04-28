@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Haifa Celeryn</title>
     <link rel="stylesheet" href="assets/style.css">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,800&display=swap" rel="stylesheet">
 </head>
@@ -20,7 +19,14 @@
                     <div class="logo-text"><span class="blue">ode</span><span class="yellow">Lyn</span></div>
                 </div>
             </div>
-            <nav>
+
+            <div id="hamburger" class="hamburger">
+                <div id="line-1"></div>
+                <div id="line-2"></div>
+                <div id="line-3"></div>
+            </div>
+            
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#aboutme">ABOUT ME</a></li>
@@ -33,6 +39,12 @@
             </nav>
         </div>
     </header>
+
+
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
     
     <!-- Hero Section -->
     <section id="home">
@@ -72,314 +84,363 @@
     </section>
     
     <!-- About Me -->
-<section id="aboutme">
-    <div class="container aboutme-container">
-        <img src="assets/img/Foto Me.png" alt="Foto Me">
-        <div class="text-content">
-            <h2>ABOUT ME</h2>
-            <p>Hi! I'm Haifa Celeryn, a UI/UX Designer with a passion for creating simple and user-friendly designs. 
-                I enjoy exploring new ideas, improving user experiences, and making designs that not only look
-                good but also work well. With a background in Informatics Engineering, I combine creativity with technical knowledge to develop intuitive digital solutions.
-            </p>
-            <div class="stats">
-                <div>
-                    <strong>2 years+</strong>
-                    <p>Experience</p>
+    <section id="aboutme">
+        <div class="container aboutme-container">
+            <img src="assets/img/Foto Me.png" alt="Foto Me">
+            <div class="text-content">
+                <h2>ABOUT ME</h2>
+                <p>Hi! I'm Haifa Celeryn, a UI/UX Designer with a passion for creating simple and user-friendly designs. 
+                    I enjoy exploring new ideas, improving user experiences, and making designs that not only look
+                    good but also work well. With a background in Informatics Engineering, I combine creativity with technical knowledge to develop intuitive digital solutions.
+                </p>
+                <div class="stats">
+                    <div>
+                        <strong>2 years+</strong>
+                        <p>Experience</p>
+                    </div>
+                    <div>
+                        <strong>20</strong>
+                        <p>Projects</p>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <p>Customer Support</p>
+                    </div>
                 </div>
-                <div>
-                    <strong>20</strong>
-                    <p>Projects</p>
-                </div>
-                <div>
-                    <strong>24/7</strong>
-                    <p>Customer Support</p>
-                </div>
+                <button>
+                    <a href="#contact">Contact Me</a>
+                </button>
             </div>
-            <button>
-                <a href="#contact">Contact Me</a>
-            </button>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Skills -->
-<section id="skills">
-    <div class="container skills-container">
-        <h2>MY SKILLS</h2>
-        <div class="skills-list">
+    <section id="skills">
+        <div class="container skills-container">
+            <h2>MY SKILLS</h2>
+            <div class="skills-list">
 
-            <!-- Skill Item -->
-            <div class="skill">
-                <div class="icon-skill">
-                    <img src="assets/img/Figma.png" alt="Figma">
+                <!-- Skill Item -->
+                <div class="skill">
+                    <div class="icon-skill">
+                        <img src="assets/img/Figma.png" alt="Figma">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                    <span>100%</span>
+                    <p>FIGMA</p>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
+
+                <div class="skill">
+                    <div class="icon-skill">
+                        <img src="assets/img/Adobe XD.png" alt="Adobe XD">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span>80%</span>
+                    <p>ADOBE XD</p>
                 </div>
-                <span>100%</span>
-                <p>FIGMA</p>
+
+                <div class="skill">
+                    <div class="icon-skill">
+                        <img src="assets/img/Adobe PS.png" alt="Adobe Photoshop">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <span>90%</span>
+                    <p>ADOBE PS</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-skill">
+                        <img src="assets/img/HTML.png" alt="HTML">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                    <span>100%</span>
+                    <p>HTML</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-skill">
+                        <img src="assets/img/CSS.png" alt="CSS">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                    <span>100%</span>
+                    <p>CSS</p>
+                </div>
+
             </div>
-
-            <div class="skill">
-                <div class="icon-skill">
-                    <img src="assets/img/Adobe XD.png" alt="Adobe XD">
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-                <span>80%</span>
-                <p>ADOBE XD</p>
-            </div>
-
-            <div class="skill">
-                <div class="icon-skill">
-                    <img src="assets/img/Adobe PS.png" alt="Adobe Photoshop">
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
-                <span>90%</span>
-                <p>ADOBE PS</p>
-            </div>
-
-            <div class="skill">
-                <div class="icon-skill">
-                    <img src="assets/img/HTML.png" alt="HTML">
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
-                </div>
-                <span>100%</span>
-                <p>HTML</p>
-            </div>
-
-            <div class="skill">
-                <div class="icon-skill">
-                    <img src="assets/img/CSS.png" alt="CSS">
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
-                </div>
-                <span>100%</span>
-                <p>CSS</p>
-            </div>
-
         </div>
-    </div>
-</section>
-
+    </section>
     
     <!-- Hire Me -->
     <section id="services">
-            <h2>WHY <strong>HIRE ME?</strong></h2>
-            <p>
-                As a dedicated UI/UX Designer, I bring a unique blend of creativity, technical expertise, and user-centered 
-                thinking to every project. My approach ensures that designs are not only visually stunning but also functional 
-                and intuitive. Here’s why you should work with me:
-            </p>
-    
-            <div class="skills-container">
-                <div class="skill-box">
-                    <div class="icon">💡</div>
-                    <h3>Expert in UI/UX Design</h3>
-                    <p>I create user-friendly and responsive interfaces by understanding user behavior and industry trends.</p>
-                </div>
-                <div class="skill-box">
-                    <div class="icon">📄</div>
-                    <h3>Strong Design System & Branding</h3>
-                    <p>I develop cohesive design systems and brand identities to ensure consistency across digital platforms.</p>
-                </div>
-                <div class="skill-box">
-                    <div class="icon">💻</div>
-                    <h3>Web & Mobile App Specialist</h3>
-                    <p>I design sleek and modern interfaces that enhance user engagement for both web and mobile applications.</p>
-                </div>
+        <h2>WHY <strong>HIRE ME?</strong></h2>
+        <p>
+            As a dedicated UI/UX Designer, I bring a unique blend of creativity, technical expertise, and user-centered 
+            thinking to every project. My approach ensures that designs are not only visually stunning but also functional 
+            and intuitive. Here's why you should work with me:
+        </p>
+
+        <div class="skills-container">
+            <div class="skill-box">
+                <div class="icon">💡</div>
+                <h3>Expert in UI/UX Design</h3>
+                <p>I create user-friendly and responsive interfaces by understanding user behavior and industry trends.</p>
             </div>
+            <div class="skill-box">
+                <div class="icon">📄</div>
+                <h3>Strong Design System & Branding</h3>
+                <p>I develop cohesive design systems and brand identities to ensure consistency across digital platforms.</p>
+            </div>
+            <div class="skill-box">
+                <div class="icon">💻</div>
+                <h3>Web & Mobile App Specialist</h3>
+                <p>I design sleek and modern interfaces that enhance user engagement for both web and mobile applications.</p>
+            </div>
+        </div>
     </section>
     <br>
 
-   <!-- MY PORTFOLIO -->
-<section id="portfolio">
-    <h2>Lets have a look at <b>MY PORTFOLIO</b></h2>
-    <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="assets/img/Beauty Store.png" alt="Beauty Store">
-            <b>Beauty Store</b>
-            <a href="#">E-Commerce</a>
+    <!-- MY PORTFOLIO -->
+    <section id="portfolio">
+        <h2>Lets have a look at <b>MY PORTFOLIO</b></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="assets/img/Beauty Store.png" alt="Beauty Store">
+                <b>Beauty Store</b>
+                <a href="#">E-Commerce</a>
+            </div>
+            <div class="portfolio-box">
+                <img src="assets/img/Healthcare App.png" alt="Healthcare App">
+                <b>MediCare</b>
+                <a href="#">Healthcare App</a>
+            </div>
+            <div class="portfolio-box">
+                <img src="assets/img/Travel App.png" alt="Travel App">
+                <b>Travel App</b>
+                <a href="#">Travel Applications</a>
+            </div>
+            <div class="portfolio-box">
+                <img src="assets/img/Event Organizer.png" alt="Event Organizer">
+                <b>Event Organizer</b>
+                <a href="#">Event Management</a>
+            </div>
+            <div class="portfolio-box">
+                <img src="assets/img/Food Delivery.png" alt="Food Delivery">
+                <b>Food Delivery</b>
+                <a href="#">Online Catering</a>
+            </div>
+            <div class="portfolio-box">
+                <img src="assets/img/Aisyah Thrift.png" alt="Aisyah Thrift">
+                <b>Aisyah Thrift</b>
+                <a href="#">E-Commerce</a>
+            </div>
         </div>
-        <div class="portfolio-box">
-            <img src="assets/img/Healthcare App.png" alt="Healthcare App">
-            <b>MediCare</b>
-            <a href="#">Healthcare App</a>
-        </div>
-        <div class="portfolio-box">
-            <img src="assets/img/Travel App.png" alt="Travel App">
-            <b>Travel App</b>
-            <a href="#">Travel Applications</a>
-        </div>
-        <div class="portfolio-box">
-            <img src="assets/img/Event Organizer.png" alt="Event Organizer">
-            <b>Event Organizer</b>
-            <a href="#">Event Management</a>
-        </div>
-        <div class="portfolio-box">
-            <img src="assets/img/Food Delivery.png" alt="Food Delivery">
-            <b>Food Delivery</b>
-            <a href="#">Online Catering</a>
-        </div>
-        <div class="portfolio-box">
-            <img src="assets/img/Aisyah Thrift.png" alt="Aisyah Thrift">
-            <b>Aisyah Thrift</b>
-            <a href="#">E-Commerce</a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Testimonials -->
-<section id="testimonials">
-    <h2 id="testimonials-title"> Testimonials That<span> Speak to My Results</span>
-    </h2>
-    <div class="testimonial-container">
-        <div class="testimonial">
-            <div class="testimonial-header">
-                <img src="assets/img/Aisyah Putri.png" alt="Aisyah Putri">
-                <div>
-                    <h3>Aisyah Putri</h3>
-                    <p>Founder of a Local Brand</p>
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h2 id="testimonials-title"> Testimonials That<span> Speak to My Results</span>
+        </h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="assets/img/Aisyah Putri.png" alt="Aisyah Putri">
+                    <div>
+                        <h3>Aisyah Putri</h3>
+                        <p>Founder of a Local Brand</p>
+                    </div>
+                </div>
+                <p>★★★★★ 5.0</p>
+                <p>Working with Haifa was a great experience! Her UI/UX design was modern, responsive, and user-friendly. She paid attention to every detail, ensuring smooth interactions and a clean look. 
+                I highly recommend her for anyone needing a skilled designer</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="assets/img/Rizki Pratama.png" alt="Rizki Pratama">
+                    <div>
+                        <h3>Rizki Pratama</h3>
+                        <p>Software Engineer</p>
+                    </div>
+                </div>
+                <p>★★★★★ 5.0</p>
+                <p>Haifa has a strong understanding of user experience. She not only creates visually appealing designs but also ensures seamless interaction. She listens to feedback and delivers high-quality work. 
+                A great designer to work with!</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="assets/img/Natasya Aurora.png" alt="Natasya Aurora">
+                    <div>
+                        <h3>Natasya Aurora</h3>
+                        <p>Product Manager</p>
+                    </div>
+                </div>
+                <p>★★★★★ 5.0</p>
+                <p>Haifa's designs are impressive! She knows how to balance aesthetics and usability, making interfaces more engaging. Her creativity and attention to detail make her an excellent UI/UX designer!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact">
+        <h2>CONTACT ME</h2>
+        <p>We are committed to processing the information in order to contact you and talk about your project.</p>
+
+        <div class="contact-container">
+            <!-- Informasi Kontak -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>haifaceleryn@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Jln. Raya Cihaurbeuti-Kabupaten Ciamis</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-phone"></i>
+                    <span>0896-5966-6027</span>
                 </div>
             </div>
-            <p>★★★★★ 5.0</p>
-            <p>Working with Haifa was a great experience! Her UI/UX design was modern, responsive, and user-friendly. She paid attention to every detail, ensuring smooth interactions and a clean look. 
-            I highly recommend her for anyone needing a skilled designer</p>
-        </div>
-        
-        <div class="testimonial">
-            <div class="testimonial-header">
-                <img src="assets/img/Rizki Pratama.png" alt="Rizki Pratama">
-                <div>
-                    <h3>Rizki Pratama</h3>
-                    <p>Software Engineer</p>
+
+            <!-- Formulir Kontak -->
+            <form action="https://formspree.io/f/xdkgkqaa" method="POST">
+                <div class="input-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
                 </div>
-            </div>
-            <p>★★★★★ 5.0</p>
-            <p>Haifa has a strong understanding of user experience. She not only creates visually appealing designs but also ensures seamless interaction. She listens to feedback and delivers high-quality work. 
-            A great designer to work with!</p>
-        </div>
-        
-        <div class="testimonial">
-            <div class="testimonial-header">
-                <img src="assets/img/Natasya Aurora.png" alt="Natasya Aurora">
-                <div>
-                    <h3>Natasya Aurora</h3>
-                    <p>Product Manager</p>
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
                 </div>
-            </div>
-            <p>★★★★★ 5.0</p>
-            <p>Haifa’s designs are impressive! She knows how to balance aesthetics and usability, making interfaces more engaging. Her creativity and attention to detail make her an excellent UI/UX designer!</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Me -->
-<section id="contact">
-    <h2>CONTACT ME</h2>
-    <p>We are committed to processing the information in order to contact you and talk about your project.</p>
-
-    <div class="contact-container">
-        <!-- Informasi Kontak -->
-        <div class="contact-info">
-            <div class="info-item">
-                <i class="fa fa-envelope"></i>
-                <span>haifaceleryn@gmail.com</span>
-            </div>
-            <div class="info-item">
-                <i class="fa fa-map-marker"></i>
-                <span>Jln. Raya Cihaurbeuti-Kabupaten Ciamis</span>
-            </div>
-            <div class="info-item">
-                <i class="fa fa-phone"></i>
-                <span>0896-5966-6027</span>
-            </div>
-        </div>
-
-        <!-- Formulir Kontak -->
-        <form action="#" method="POST">
-            <div class="input-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
-            </div>
-            <div class="input-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
-            </div>
-            <div class="input-group">
-                <label for="phone">No Telepon *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+62" pattern="[0-9+ -]*">
-            </div>            
-            <div class="input-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>        
-    <div class="footer-container">
-        <div class="footer-left">
-            <!-- Logo CodeLyn -->
-            <div class="logo">
-                <div class="circle">C</div>
-                <span class="code">ode</span><span class="lyn">Lyn</span>
-            </div>
-            <p>Feel free to reach out for collaborations, inquiries, or just to say hello! I'm always excited to discuss new ideas and projects. Let's create something amazing together!</p>
-            <p>📩 haifaceleryn@gmail.com</p>
-            <p>📍 Cihaurbeuti - Ciamis Jawa Barat</p>
-            <p>Follow me on social media for updates and insights:</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/haifa-celeryn-084a5b353/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/haifaceleryn075" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://web.facebook.com/profile.php?id=100010766865753" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/haifaceleryn_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-center">
-            <h3>Navigation</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-right">
-            <h3>Contact</h3>
-            <p>081223702871</p>
-            <p>haifaceleryn@gmail.com</p>
-            <p>Portfolio-haifaceleryn.com</p>
-            <br>
-            <h3>Get the latest information</h3>
-            <form action="#" class="email-form">
-                <input type="email" class="email-input" placeholder="Email Address">
-                <button type="submit" class="email-btn">➤</button>
+                <div class="input-group">
+                    <label for="phone">No Telepon *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+62" pattern="[0-9+ -]*">
+                </div>            
+                <div class="input-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
+                </div>
+                <button type="submit">Submit</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <hr>
-    <div class="footer-bottom">
-        <p>Copyright© 2025 Haifa Celeryn. All Rights Reserved.</p>
-        <p><a href="#">User Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>        
+        <div class="footer-container">
+            <div class="footer-left">
+                <!-- Logo CodeLyn -->
+                <div class="logo">
+                    <div class="circle">C</div>
+                    <span class="code">ode</span><span class="lyn">Lyn</span>
+                </div>
+                <p>Feel free to reach out for collaborations, inquiries, or just to say hello! I'm always excited to discuss new ideas and projects. Let's create something amazing together!</p>
+                <p>📩 haifaceleryn@gmail.com</p>
+                <p>📍 Cihaurbeuti - Ciamis Jawa Barat</p>
+                <p>Follow me on social media for updates and insights:</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/haifa-celeryn-084a5b353/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/haifaceleryn075" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=100010766865753" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/haifaceleryn_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
 
+            <div class="footer-center">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>081223702871</p>
+                <p>haifaceleryn@gmail.com</p>
+                <p>Portfolio-haifaceleryn.com</p>
+                <br>
+                <h3>Get the latest information</h3>
+                <form action="#" class="email-form">
+                    <input type="email" class="email-input" placeholder="Email Address">
+                    <button type="submit" class="email-btn">➤</button>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <div class="footer-bottom">
+            <p>Copyright© 2025 Haifa Celeryn. All Rights Reserved.</p>
+            <p><a href="#">User Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- Script untuk Hamburger Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen yang diperlukan
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            const overlay = document.getElementById('overlay');
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            
+            // Fungsi untuk menampilkan/menyembunyikan menu
+            function toggleMenu() {
+                // Toggle class active
+                console.log('Toggling menu...');
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                 // Mengatur scroll pada body
+                if (navMenu.classList.contains('active')) {
+                    console.log('Menu is active, hiding body scroll');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    console.log('Menu is not active, showing body scroll');
+                    document.body.style.overflow = ''; 
+                }
+            }
+            
+            // Event listener untuk klik pada hamburger
+            hamburger.addEventListener('click', toggleMenu);
+            
+            // Event listener untuk klik pada overlay (untuk menutup menu saat mengklik di luar)
+            overlay.addEventListener('click', toggleMenu);
+            
+            // Menutup menu saat link navigasi diklik
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Hanya menutup jika menu sedang aktif
+                    if (navMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+            
+            // Menutup menu saat menekan tombol Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
